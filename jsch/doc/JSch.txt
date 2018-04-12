@@ -1,0 +1,35 @@
+
+JSch (Java Secure Channel)
+jsch 是SSH2协议的实现，连接到一个SSH服务器，并且可以使用端口转发，x11转发、
+文件传输等.
+
+SFTP
+jsch 实现 SFTP(Secure File Transfer Protocol 安全文件传输协议)，可以为文件传输
+提供一种安全的加密方法. SFTP是SSH的一部分，是一种传输文件到服务器的安全方式.
+SFTP使用加密传输认证信息和数据. 由于SFTP使用了加密/解密技术，所以传输效率比
+普通FTP要低得多，如果对网络安全要求较高时，可以使用SFTP代替FTP.
+
+参考教程
+http://www.cnblogs.com/longyg/archive/2012/06/25/2556576.html
+
+1) ChannelSftp对象
+
+2) 文件上传
+ChannelSftp.put()
+
+3) 监控传输进度
+SftpProgressMonitor
+4)
+
+5)
+
+
+
+
+
+
+
+
+
+
+

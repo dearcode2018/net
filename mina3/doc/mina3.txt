@@ -1,0 +1,53 @@
+Apache Mina 3.x
+mina(Multipurpose Infrastructure Networked Applications 多目的基础网络应用程序)
+
+参考
+http://blog.csdn.net/cnicys/article/details/8525612
+
+Mina是一个网络应用框架，可以帮助用户开发高性能和高扩展性的网络应用程序，提供了一个抽象、
+事件驱动的异步API，使Java NIO在各种传输协议下快速高效开发.
+Apache Mina框架也称为 NIO框架、C/S框架、网络套接字类库、事件驱动的异步API.
+总之，可以理解成封装底层IO操作，提供高级操作API的通讯框架.
+
+功能组件
+1) IoService: 这个接口在一个线程上负责套接字的建立，拥有自己的Selector，监听是否有连接被建立.
+Mina底层使用JAVA NIO，是用典型的Reactor模式架构的，采用事件驱动编程，Mina运行用户自定义
+线程模型，可以是单线程、多线程、线程池.
+跟Java Socket不同，Mina是非堵塞的Socket，它内部已经保证了对各个连接(session)的业务和数据的隔离，
+采用轮询机制为各个session分配CPU资源.
+
+2) IoProcessor
+这个接口在另一个线程上负责检查是否有数据在通道上读写，也就是说它拥有自己的Selector.
+IoProcessor负责调用注册子在IoServer上的过滤器，并在过滤器链之后调用IoHandler.
+
+3) IoFilter
+该接口定义一组拦截器，这些拦截器可以包括日志输出、黑名单过滤、数据编码和解码等.
+其中数据编码和解码是使用mina时最主要 关注的地方.
+
+4) IoHandler
+该接口负责编写业务逻辑，也即接受、发送数据的地方.
+
+Mina流程 (参考: http://www.shangxueba.com/jingyan/1860368.html)
+1) 建立服务端资源，包括Acceptor的建立，之后为Acceptor配置相应的Filter，之后再配置相应基于事件驱动的处理业务
+逻辑的IoHandler.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

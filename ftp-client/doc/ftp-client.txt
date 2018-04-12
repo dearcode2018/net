@@ -1,0 +1,32 @@
+
+
+
+
+ftp
+设置问题: 登录前设置、登录后设置
+
+1) 编码问题
+
+
+2) 传输模式
+setFileTransferMode(int FTP.xx)
+被动模式
+主动模式
+FTPClient 默认使用 ASCII 作为传输模式，只能传输文本文件，设置为setFileType(FTP.BINARY_FILE_TYPE)
+就可以传输二进制文件.
+
+
+3) 断点续传
+FTPClient.setRestartOffset 配合RandomAccessFile使用 即可实现断点续传.
+
+
+4) 传输多个
+FTPClient.completePendingCommand() 解决不能传输多个文件的问题.
+
+
+
+
+
+
+
+

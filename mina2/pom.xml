@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.hua</groupId>
+		<artifactId>net-entire</artifactId>
+		<version>0.0.1</version>
+	</parent>	
+	<artifactId>mina2</artifactId>
+	<packaging>jar</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<mina.version>0.0.1</mina.version>
+		<net.version>0.0.1</net.version>
+		<apache.mina.version>2.0.9</apache.mina.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.hua</groupId>
+			<artifactId>net</artifactId>
+			<version>${net.version}</version>
+		</dependency>
+		
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-core</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+		
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-transport-apr</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-integration-jmx</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+		
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-integration-beans</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+		
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-integration-ognl</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+		
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-integration-xbean</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>						
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-legal</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>	
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-statemachine</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>	
+		
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-transport-apr</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>	
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-transport-serial</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>	
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-filter-compression</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>		
+
+		<dependency>
+			<groupId>org.rxtx</groupId>
+			<artifactId>rxtx</artifactId>
+			<version>2.1.7</version>
+			<scope>provided</scope>
+		</dependency> -->
+
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-codec</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-coap</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+		
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-http</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-examples</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+<!-- 
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-protobuf</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+		
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-benchmarks2</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-benchmarks</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+
+<!-- 		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-thrift</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency> -->
+	
+	</dependencies>
+
+</project>
