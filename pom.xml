@@ -11,6 +11,7 @@
 	<modules>
 		<!-- 模板 -->
 		<module>net-template</module>		
+		<module>net</module>	
 		<module>cifs</module>		
 		<module>ftp</module>		
 		<module>ftp-client</module>		
@@ -18,7 +19,8 @@
 		<module>mina</module>		
 		<module>mina2</module>		
 		<module>mina3</module>	
-		<module>net</module>		
+		<module>netty</module>	
+		<module>netty5</module>
 		<module>socket</module>		
 		<module>url</module>		
 	

@@ -1,0 +1,23 @@
+Netty
+
+Netty In Action (Netty 实战)
+http://www.360doc.com/content/17/1228/16/51390869_717147176.shtml
+1.简介
+Netty是基于NIO的网络应用层框架，client-server(客户端服务器)框架.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
