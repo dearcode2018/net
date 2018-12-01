@@ -22,6 +22,7 @@
 		<module>netty</module>	
 		<module>netty5</module>
 		<module>socket</module>		
+		<module>socket-spring</module>
 		<module>url</module>		
 	
 	</modules>
