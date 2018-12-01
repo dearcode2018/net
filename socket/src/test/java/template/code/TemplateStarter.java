@@ -7,7 +7,7 @@
  */
 package template.code;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 描述: 启动器

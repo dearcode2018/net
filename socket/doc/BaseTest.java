@@ -7,16 +7,14 @@
  */
 package com.hua.test;
 
+// 静态导入
 import java.io.Reader;
 import java.io.Writer;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 
 import com.hua.log.BaseLog;
 
@@ -27,19 +25,12 @@ import com.hua.log.BaseLog;
  * @author qye.zheng
  * BaseTest
  */
-//@RunWith(JUnitPlatform.class)
-//@TestInstance(TestInstance.Lifecycle.PER_METHOD)
-@DisplayName("BaseTest")
+//@RunWith()
 public class BaseTest extends BaseLog {
-	
 	
 	public static final String SERVER_ADDR = "127.0.0.1";
 	
 	public static final int SERVER_PORT = 8087;
-	
-	/** 消息结束短语 */
-	protected static final String MSG_END_PHRASE = "MsgEnd";
-	
 	
 	public Socket socketOfClient;
 	
@@ -68,8 +59,7 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@DisplayName("beforeClass")
-	@BeforeAll
+	@BeforeClass
 	public static void beforeClass() {
 		System.out.println("beforeClass()");
 	}
@@ -80,34 +70,9 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@DisplayName("afterClass")
-	@AfterAll
+	@AfterClass
 	public static void afterClass() {
 		System.out.println("afterClass()");
-	}
-	
-	/**
-	 * 
-	 * 描述: [每个测试-方法]开始之前运行
-	 * @author qye.zheng
-	 * 
-	 */
-	@DisplayName("beforeMethod")
-	@BeforeEach
-	public void beforeMethod() {
-		System.out.println("beforeMethod()");
-	}
-	
-	/**
-	 * 
-	 * 描述: [每个测试-方法]结束之后运行
-	 * @author qye.zheng
-	 * 
-	 */
-	@DisplayName("afterMethod")
-	@AfterEach
-	public void afterMethod() {
-		System.out.println("afterMethod()");
 	}
 
 }
