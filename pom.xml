@@ -19,8 +19,10 @@
 		<module>mina</module>		
 		<module>mina2</module>		
 		<module>mina3</module>	
+		<module>mina-spring</module>
 		<module>netty</module>	
 		<module>netty5</module>
+		<module>netty-spring</module>
 		<module>socket</module>		
 		<module>socket-spring</module>
 		<module>url</module>		
@@ -39,6 +41,7 @@
 		<maven.plugin.resources.version>2.7</maven.plugin.resources.version>
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
+		<spring.version>5.0.6.RELEASE</spring.version>			
 	</properties>  
   
   

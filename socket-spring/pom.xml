@@ -13,7 +13,6 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- spring -->
-		<spring.version>5.0.6.RELEASE</spring.version>		
 		<net.version>0.0.1</net.version>
 	</properties>
 
