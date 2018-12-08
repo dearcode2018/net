@@ -26,6 +26,7 @@
 		<module>socket</module>		
 		<module>socket-spring</module>
 		<module>url</module>		
+		<module>websocket</module>
 	
 	</modules>
  
