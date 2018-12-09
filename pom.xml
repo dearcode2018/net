@@ -42,7 +42,8 @@
 		<maven.plugin.resources.version>2.7</maven.plugin.resources.version>
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
-		<spring.version>5.0.6.RELEASE</spring.version>			
+		<spring.version>5.0.6.RELEASE</spring.version>	
+		<web.version>0.0.1</web.version>				
 	</properties>  
   
   

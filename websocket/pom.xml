@@ -29,7 +29,12 @@
 		    <artifactId>Java-WebSocket</artifactId>
 		    <version>${java.webSocket.version}</version>
 		</dependency>	
-	
+
+		<dependency>
+			<groupId>com.hua</groupId>
+			<artifactId>web</artifactId>
+			<version>${web.version}</version>
+		</dependency>	
 	
 	</dependencies>
 

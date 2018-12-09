@@ -1,0 +1,16 @@
+
+测试站点，通过这个站点可以调试本地WebSocket程序
+http://www.blue-zero.com/WebSocket
+输入内网地址或本地地址例如 ws://127.0.0.1:8087
+
+
+
+
+
+
+
+
+
+
+
+
