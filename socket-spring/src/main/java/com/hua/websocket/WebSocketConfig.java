@@ -9,6 +9,7 @@ package com.hua.websocket;
 import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
@@ -20,6 +21,7 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
  */
 @Configuration
 @EnableWebSocket
+//@EnableWebMvc
 public class WebSocketConfig implements WebSocketConfigurer
 {
 
@@ -40,5 +42,7 @@ public class WebSocketConfig implements WebSocketConfigurer
 		 */
 		registry.addHandler(someMessageHandler, "/some/message").addInterceptors(new WebSocketInterceptor());
 	}
+	
+
 
 }

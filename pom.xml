@@ -27,7 +27,7 @@
 		<module>socket-spring</module>
 		<module>url</module>		
 		<module>websocket</module>
-	
+		<module>websocket-spring</module>
 	</modules>
  
 	<!-- 公共属性 -->
@@ -43,7 +43,8 @@
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
 		<spring.version>5.0.6.RELEASE</spring.version>	
-		<web.version>0.0.1</web.version>				
+		<web.version>0.0.1</web.version>			
+		<apache.mina.version>3.0.0-M2</apache.mina.version>			
 	</properties>  
   
   

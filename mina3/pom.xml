@@ -12,15 +12,70 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
-		<mina.version>0.0.1</mina.version>
+		<common.version>0.0.1</common.version>
+
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.hua</groupId>
-			<artifactId>mina</artifactId>
-			<version>${mina.version}</version>
+			<artifactId>common</artifactId>
+			<version>${common.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-core</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-codec</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-coap</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-http</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-examples</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-protobuf</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-benchmarks2</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-benchmarks</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-thrift</artifactId>
+			<version>${apache.mina.version}</version>
+		</dependency>	
 	
 	</dependencies>
 

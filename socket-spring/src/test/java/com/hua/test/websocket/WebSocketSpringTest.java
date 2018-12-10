@@ -20,6 +20,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
+import javax.annotation.Resource;
+import javax.websocket.ContainerProvider;
+import javax.websocket.WebSocketContainer;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -30,6 +34,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.socket.client.standard.WebSocketContainerFactoryBean;
+import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 
 import com.hua.test.BaseTest;
 
@@ -49,8 +56,8 @@ import com.hua.test.BaseTest;
 @ContextConfiguration(locations = {
 		"classpath:conf/xml/spring-bean.xml", 
 		"classpath:conf/xml/spring-config.xml", 
-		"classpath:conf/xml/spring-mvc.xml", 
-		"classpath:conf/xml/spring-service.xml"
+		"classpath:conf/xml/spring-service.xml",
+		"classpath:conf/xml/spring-context.xml"		
 		})
 public final class WebSocketSpringTest extends BaseTest {
 
@@ -91,8 +98,25 @@ public final class WebSocketSpringTest extends BaseTest {
 	 * 将目标项目的配置复制到当前项目同一路径下
 	 * 
 	 */
+	@Resource
+    private WebApplicationContext webApplicationContext; 
 	
-	
+	/**
+	 * 
+	 * 描述: 
+	 * @author qye.zheng
+	 * 
+	 */
+	//@DisplayName("test")
+	@Test
+	public void testWebSocketSpring() {
+		try {
+			WebSocketContainer container = ContainerProvider.getWebSocketContainer();
+			
+		} catch (Exception e) {
+			log.error("testWebSocketSpring =====> ", e);
+		}
+	}
 	
 	/**
 	 * 

@@ -14,6 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- spring -->
 		<net.version>0.0.1</net.version>
+		<tomcat.embed.version>8.5.35</tomcat.embed.version>
 	</properties>
 
 	<dependencies>
@@ -59,12 +60,6 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
-<!-- 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc-portlet</artifactId>
-			<version>${spring.version}</version>
-		</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -131,6 +126,19 @@
 			<artifactId>spring-messaging</artifactId>
 			<version>${spring.version}</version>
 		</dependency>		
+
+		<dependency>
+			<groupId>com.hua</groupId>
+			<artifactId>web</artifactId>
+			<version>${web.version}</version>
+		</dependency>	
+		
+		<!-- 指定websocket容器 -->
+		<dependency> 
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-websocket</artifactId> 
+			<version>${tomcat.embed.version}</version> 
+		</dependency>	
 	
 	</dependencies>
 
