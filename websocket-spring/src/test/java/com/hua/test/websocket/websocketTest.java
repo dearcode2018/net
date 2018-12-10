@@ -1,6 +1,6 @@
 /**
  * 描述: 
- * websocketTest.java
+ * WebSocketTest.java
  * 
  * @author qye.zheng
  *  version 1.0
@@ -20,20 +20,53 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.net.URI;
+
 import org.junit.Ignore;
 import org.junit.Test;
 
 import com.hua.test.BaseTest;
+import com.hua.websocket.SomeWebSocketClient;
 
 
 /**
- * 描述: Websocket - 测试
+ * 描述: 
  * 
  * @author qye.zheng
- * websocketTest
+ * WebSocketTest
  */
-public final class websocketTest extends BaseTest {
+public final class WebSocketTest extends BaseTest {
 
+	
+	
+	/**
+	 * 
+	 * 描述: 
+	 * @author qye.zheng
+	 * 
+	 */
+	//@DisplayName("test")
+	@Test
+	public void testClient() {
+		try {
+			//URI uri = new URI("ws://127.0.0.1:8080/websocket-spring/some/message");
+			URI uri = new URI("ws://127.0.0.1:8080/websocket-spring/some/message");
+			SomeWebSocketClient wsClient = new SomeWebSocketClient(uri);
+			// 连接
+			wsClient.connect();
+			
+			// 延迟，等待建立好连接
+			Thread.sleep(2 * 1000);
+
+			// 发送消息给客户端
+			wsClient.send("你好，I am client!");
+	
+			
+		} catch (Exception e) {
+			log.error("testClient =====> ", e);
+		}
+	}
+	
 	/**
 	 * 
 	 * 描述: 
@@ -47,22 +80,6 @@ public final class websocketTest extends BaseTest {
 			
 		} catch (Exception e) {
 			log.error("test =====> ", e);
-		}
-	}
-	
-	/**
-	 * 
-	 * 描述: 
-	 * @author qye.zheng
-	 * 
-	 */
-	@Test
-	public void testwebsocket() {
-		try {
-			
-			
-		} catch (Exception e) {
-			log.error("testwebsocket =====> ", e);
 		}
 	}
 	

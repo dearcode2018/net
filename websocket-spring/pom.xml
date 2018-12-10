@@ -7,7 +7,6 @@
 		<version>0.0.1</version>
 	</parent>	
 	<artifactId>websocket-spring</artifactId>
-	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<name>websocket-spring</name>
 	<properties>
@@ -235,8 +234,21 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-messaging</artifactId>
 			<version>${spring.version}</version>
-		</dependency>			
-	
+		</dependency>	
+		
+		<!-- 指定websocket容器 -->
+		<dependency> 
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-websocket</artifactId> 
+			<version>${tomcat.embed.version}</version> 
+			<scope>test</scope>
+		</dependency>		
+
+		<dependency>
+		    <groupId>org.java-websocket</groupId>
+		    <artifactId>Java-WebSocket</artifactId>
+		    <version>${java.webSocket.version}</version>
+		</dependency>	
 		
 	</dependencies>
 
