@@ -13,20 +13,21 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
-		<netty.version>0.0.1</netty.version>
+		<com.hua.netty.version>0.0.1</com.hua.netty.version>
+		<netty.version>5.0.0.Alpha2</netty.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.hua</groupId>
 			<artifactId>netty</artifactId>
-			<version>${netty.version}</version>
+			<version>${com.hua.netty.version}</version>
 		</dependency>
 
 	<dependency>
 	    <groupId>io.netty</groupId>
 	    <artifactId>netty-all</artifactId>
-	    <version>5.0.0.Alpha2</version>
+	    <version>${netty.version}</version>
 	</dependency>
 	
 	</dependencies>

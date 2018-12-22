@@ -28,6 +28,10 @@ import com.hua.log.BaseLog;
 public class BaseTest extends BaseLog {
 	
 	
+	public static final String SERVER_NAME = "127.0.0.1";
+	
+	public static final int SERVER_PORT = 8087;
+	
 	/**
 	 * 
 	 * 描述: [所有测试]开始之前运行
