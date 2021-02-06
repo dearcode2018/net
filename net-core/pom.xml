@@ -7,19 +7,18 @@
 		<artifactId>net-entire</artifactId>
 		<version>1.0.0</version>
 	</parent>	
-	<artifactId>url</artifactId>
+	<artifactId>net-core</artifactId>
 	<packaging>jar</packaging>
-	<name>url</name>
+	<name>net-core</name>
 	<properties>
-
 	</properties>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.hua</groupId>
 			<artifactId>common</artifactId>
 		</dependency>
-		
+	
 	</dependencies>
 
 </project>

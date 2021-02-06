@@ -1,40 +1,40 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.hua</groupId>
-  <artifactId>net-entire</artifactId>
-  <version>0.0.1</version>
-  <packaging>pom</packaging>
-  <name>net-entire</name>
-  <description>net Maven Entire Project</description>
-  
-  	<!-- 模块-子项目 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hua</groupId>
+	<artifactId>net-entire</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>net-entire</name>
+	<description>net Maven Entire Project</description>
+
+	<!-- 模块-子项目 -->
 	<modules>
 		<!-- 模板 -->
-		<module>net-template</module>		
-		<module>net</module>	
-		<module>cifs</module>		
-		<module>ftp</module>		
-		<module>ftp-client</module>		
-		<module>jsch</module>		
-		<module>mina</module>		
-		<module>mina2</module>		
-		<module>mina3</module>	
+		<module>net-template</module>
+		<module>net-core</module>
+		<module>cifs</module>
+ 		<module>ftp</module>
+		<module>ftp-client</module>
+		<module>jsch</module>
+		<module>mina</module>
 		<module>mina-spring</module>
-		<module>netty</module>	
-		<module>netty5</module>
+		<module>netty</module>
 		<module>netty-spring</module>
-		<module>socket</module>		
+		<module>socket</module>
 		<module>socket-spring</module>
-		<module>url</module>		
+		<module>url</module>
 		<module>websocket</module>
 		<module>websocket-spring</module>
+		<module>ip</module>
 	</modules>
- 
+
 	<!-- 公共属性 -->
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.version>0.0.1</maven.version>
+		<maven.version>1.0.0</maven.version>
 		<maven.plugin.compiler.version>3.3</maven.plugin.compiler.version>
 		<maven.plugin.source.version>2.4</maven.plugin.source.version>
 		<maven.plugin.surefire.version>2.18.1</maven.plugin.surefire.version>
@@ -42,18 +42,206 @@
 		<maven.plugin.resources.version>2.7</maven.plugin.resources.version>
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
-		<spring.version>5.0.6.RELEASE</spring.version>	
-		<web.version>0.0.1</web.version>			
-		<tomcat.embed.version>8.5.35</tomcat.embed.version>	
-		<java.webSocket.version>1.3.9</java.webSocket.version>		
-		<apache.mina.version>2.0.19</apache.mina.version>					
-	</properties>  
-  
-  
- 	<!-- 公共构建 -->
+		<spring.version>5.2.12.RELEASE</spring.version>
+		<web.version>1.0.0</web.version>
+		<tomcat.embed.version>8.5.35</tomcat.embed.version>
+		<java.webSocket.version>1.3.9</java.webSocket.version>
+		<apache.mina.version>2.0.19</apache.mina.version>
+		<net-core.version>1.0.0</net-core.version>
+		<jcifs.version>1.3.17</jcifs.version>
+		<com.hua.ftp.version>1.0.0</com.hua.ftp.version>
+		<com.hua.mina.version>1.0.0</com.hua.mina.version>
+		<common.version>1.0.0</common.version>
+		<netty.version>5.0.0.Alpha2</netty.version>
+		<tomcat.embed.version>8.5.35</tomcat.embed.version>
+		<java.webSocket.version>1.3.9</java.webSocket.version>	
+		<jsch.version>0.1.51</jsch.version>				
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.hua</groupId>
+				<artifactId>common</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.hua</groupId>
+				<artifactId>web</artifactId>
+				<version>${web.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.hua</groupId>
+				<artifactId>net-core</artifactId>
+				<version>${net-core.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>jcifs</groupId>
+				<artifactId>jcifs</artifactId>
+				<version>${jcifs.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.mina</groupId>
+				<artifactId>mina-core</artifactId>
+				<version>${apache.mina.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.mina</groupId>
+				<artifactId>mina-integration-jmx</artifactId>
+				<version>${apache.mina.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.mina</groupId>
+				<artifactId>mina-example</artifactId>
+				<version>${apache.mina.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.hua</groupId>
+				<artifactId>mina</artifactId>
+				<version>${com.hua.mina.version}</version>
+			</dependency>
+
+			<!-- spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-websocket</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jms</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-messaging</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-all</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+
+			<!-- 指定websocket容器 -->
+			<dependency>
+				<groupId>org.apache.tomcat.embed</groupId>
+				<artifactId>tomcat-embed-websocket</artifactId>
+				<version>${tomcat.embed.version}</version>
+			</dependency>
+
+			<dependency>
+			    <groupId>org.java-websocket</groupId>
+			    <artifactId>Java-WebSocket</artifactId>
+			    <version>${java.webSocket.version}</version>
+			</dependency>	
+
+			<dependency>
+				<groupId>com.jcraft</groupId>
+				<artifactId>jsch</artifactId>
+				<version>${jsch.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- 公共构建 -->
 	<build>
 		<plugins>
-
 			<!-- 编译插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -140,15 +328,27 @@
 				</configuration>
 			</plugin>
 
-			<!-- 解决 web项目pom.xml报错 -->
+			<!-- 要将源码放上去，需要加入这个插件 -->
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
+				<artifactId>maven-source-plugin</artifactId>
 				<configuration>
-					<version>${maven.plugin.war.version}</version>
+					<attach>true</attach>
+					<!-- 排除依赖的jar包 -->
+					<excludes>
+						<exclude>**/*.jar</exclude>
+					</excludes>					
 				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
 	</build>
-	
+
 </project>

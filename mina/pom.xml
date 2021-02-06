@@ -1,39 +1,52 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>com.hua</groupId>
 		<artifactId>net-entire</artifactId>
-		<version>0.0.1</version>
-	</parent>	
+		<version>1.0.0</version>
+	</parent>
 	<artifactId>mina</artifactId>
+	<name>mina</name>
 	<packaging>jar</packaging>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
-		<net.version>0.0.1</net.version>
+
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.hua</groupId>
-			<artifactId>net</artifactId>
-			<version>${net.version}</version>
+			<artifactId>net-core</artifactId>
 		</dependency>
-								
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-integration-jmx</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-example</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
 			<!-- 解决 Missing artifact bundle 错误问题 -->
-			 <plugin>  
-			    <groupId>org.apache.felix</groupId>  
-			    <artifactId>maven-bundle-plugin</artifactId>  
-			    <extensions>true</extensions>  
-			</plugin>		
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
