@@ -84,10 +84,17 @@ public final class IPv6Test extends BaseTest {
 	public void testInetAddress() {
 		try {
 			String hostOrIp = "fe80::18b5:7c11:cc48:41de";
+			/*
+			 *  错误的ipv6，提示异常:
+			 *  java.net.UnknownHostException: fe80::18b5::7c11:cc48:41de: invalid IPv6 address
+			 */
+			//hostOrIp = "fe80::18b5::7c11:cc48:41de";
+			hostOrIp = "DESKTOP-SLFG4O1";
 			InetAddress inetAddress = InetAddress.getByName(hostOrIp);
-			String format = "hostName: %s, hostAddress: %s";
+			String format = "hostName: %s, hostAddress: %s, ipv: %d";
 			// InetAddress.getHostAddress() 可以获取正规化 ipv6 字符串
-			System.out.println(String.format(format, inetAddress.getHostName(), inetAddress.getHostAddress()));
+			System.out.println(String.format(format, inetAddress.getHostName(), 
+					inetAddress.getHostAddress(), inetAddress instanceof Inet6Address ? 6 : 4));
 		
 			
 		} catch (Exception e) {
@@ -150,9 +157,9 @@ public final class IPv6Test extends BaseTest {
 	 * @author qianye.zheng
 	 */
 	public boolean isReservedAddr(InetAddress inetAddress) {
-		System.out.println(inetAddress.isAnyLocalAddress());
-		System.out.println(inetAddress.isLinkLocalAddress());
-		System.out.println(inetAddress.isLoopbackAddress());
+//		System.out.println(inetAddress.isAnyLocalAddress());
+//		System.out.println(inetAddress.isLinkLocalAddress());
+//		System.out.println(inetAddress.isLoopbackAddress());
 		return inetAddress.isAnyLocalAddress() || inetAddress.isLinkLocalAddress() 
 				|| inetAddress.isLoopbackAddress();
 	}
