@@ -17,6 +17,8 @@
 		<module>cifs</module>
  		<module>ftp</module>
 		<module>ftp-client</module>
+		<module>ip</module>
+		<module>ip2region</module>
 		<module>jsch</module>
 		<module>mina</module>
 		<module>mina-spring</module>
@@ -27,7 +29,6 @@
 		<module>url</module>
 		<module>websocket</module>
 		<module>websocket-spring</module>
-		<module>ip</module>
 	</modules>
 
 	<!-- 公共属性 -->
@@ -55,7 +56,8 @@
 		<netty.version>5.0.0.Alpha2</netty.version>
 		<tomcat.embed.version>8.5.35</tomcat.embed.version>
 		<java.webSocket.version>1.3.9</java.webSocket.version>	
-		<jsch.version>0.1.51</jsch.version>				
+		<jsch.version>0.1.51</jsch.version>
+		<ip2region.version>1.7.2</ip2region.version>
 	</properties>
 
 	<dependencyManagement>
@@ -234,6 +236,12 @@
 				<groupId>com.jcraft</groupId>
 				<artifactId>jsch</artifactId>
 				<version>${jsch.version}</version>
+			</dependency>
+
+			<dependency>
+			    <groupId>org.lionsoul</groupId>
+			    <artifactId>ip2region</artifactId>
+			    <version>${ip2region.version}</version>
 			</dependency>
 
 		</dependencies>

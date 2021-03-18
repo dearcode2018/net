@@ -1,0 +1,59 @@
+【项目信息】
+项目名称 : ip2region
+中文名称 : 网络
+项目版本 : version 1.0
+
+主要技术 : 
+https://github.com/lionsoul2014/ip2region
+
+项目描述 : 
+
+项目备注 : 
+
+【项目规划】
+
+1) 下载工程
+git clone https://github.com/lionsoul2014/ip2region.git
+
+2) 集成 ip2region
+引入依赖
+<dependency>
+    <groupId>org.lionsoul</groupId>
+    <artifactId>ip2region</artifactId>
+</dependency>
+
+3) 生成 ip2region.db
+cd C:\local_git\ip2region-master
+java -jar maker\java\dbMaker-1.2.2.jar -src data\ip.merge.txt -region data\global_region.csv
+输出ipregion.db路径: C:\local_git\ip2region-master\data
+
+4) 调用
+
+5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
